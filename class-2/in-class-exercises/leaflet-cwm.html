@@ -2,32 +2,35 @@
 <html>
 
 <head>
-  <!-- Adding in the Leaflet CSS file -->
+  <!-- Add in the Leaflet CSS file -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
-  <!-- Adding Leaflet JavaScript file -->
+  <!-- Add Leaflet JavaScript file -->
   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
-  <!-- Adding styling info for the map -->
+  <!-- Add styling info for the map -->
   <style type="text/css">
-    /* Add a CSS rule that selects an element with the ID "mapId" and gives it a height of 600 pixels */
+    #mapId {
+      height: 600px;
+    }
+
   </style>
 </head>
 
 <body>
-  <!-- Add a div with id="mapId" to give the map somewhere to go -->
-  
+  <!-- Our map will go here -->
+  <div id="mapId"></div>
   <script>
-    // Create a variable called "map" to house your Leaflet map and all of its functionality
+    var map = L.map("mapId").setView([4.595, 101.07955], 14);
 
-    /* 
-     * Use Leaflet's tileLayer method to create a new tile layer, then add it to the map 
-     ** Reference: https://leafletjs.com/reference-1.6.0.html#tilelayer
-     */
+    // // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    //   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    // }).addTo(map);
 
-    /* Try changing out the tile source for something else. Hint: you can find 
-     * lots of tile sources here: https://leaflet-extras.github.io/leaflet-providers/preview/ 
-     */
+    L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {maxZoom: 19, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
+    }).addTo(map);
 
   </script>
 </body>
 
 </html>
+
+<!-- 4.59571, 101.0795534 -->

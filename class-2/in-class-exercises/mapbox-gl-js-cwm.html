@@ -23,10 +23,24 @@
 
 <body>
     <!-- Container for the map -->
+    <div id='mapId'></div>
+
 
     <script>
         // Mapbox GL JS requires a token
-        
+        mapboxgl.accessToken = 'pk.eyJ1IjoiYWZsYWh6dWwiLCJhIjoiY2tmOG4zMWM3MDE5YzJxcjlkcm1wOWV5eiJ9.qKZdzuBg2PtiDgMOT52QHw'
+
+        var map = new mapboxgl.Map( {
+            container: 'mapId',
+            style:'mapbox://styles/mapbox/streets-v11', 
+            center: [101.07955, 4.595 ],
+            zoom: 14
+        });
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
         /* Initialize the map with:
          *  container
          *  style
