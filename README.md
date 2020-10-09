@@ -7,6 +7,7 @@ Instructor: Dan Swick, dan@mapbox.com
 Class Meetings:	Thursdays, 6:30pm–9:30pm, 01/16 - 03/05
 <br>Room/Bldg:  Harney G24
 
+Student: Aflah Zul, following this account
 ----
 
 ## Welcome to Introduction to Web Mapping with Mapbox!
